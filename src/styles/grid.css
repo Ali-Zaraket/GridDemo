@@ -1,0 +1,31 @@
+.card {
+  background-color: rgb(59, 59, 59);
+  max-width: 100%;
+  border-radius: .2rem;
+}
+
+.main-grid {
+  max-width: 100vw;
+}
+
+.save-layout-btn {
+  margin: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: .2em;
+  outline: none;
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  background-color: rgba(72, 72, 72, .5);
+  transition: all 200ms ease-in;
+}
+
+.save-layout-btn:hover {
+  background-color: rgba(72, 72, 72, 1);
+}
+
+@media (max-width: 450px) {
+  .card {
+    width: calc(100% - 20px) !important;
+  }
+}
