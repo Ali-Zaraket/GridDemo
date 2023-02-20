@@ -69,8 +69,8 @@ export default function Grid2({ editable, turnOffEditing }) {
       <ResponsiveGridLayout
         layouts={layouts}
         useCSSTransforms={true}
-        compactType={"vertical"}
-        preventCollision={true}
+        compactType="vertical"
+        preventCollision={false}
         onLayoutChange={onLayoutChange}
         breakpoints={BREAKPOINTS}
         cols={COLS}
