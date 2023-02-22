@@ -40,6 +40,10 @@ export default function Grid2({ editable, turnOffEditing }) {
     setLayouts({ ...layouts });
   };
 
+  const reset = () => {
+    setLayouts(JSON.parse(localStorage.getItem('layouts')) || layouts)
+  }
+
   const generateDOM = () => {
     return _.map(layouts.lg, function (l, i) {
       return (
@@ -66,10 +70,11 @@ export default function Grid2({ editable, turnOffEditing }) {
   return (
     <div className="mb-4">
       { editable && <button className="save-layout-btn" onClick={saveLayout}>Save</button> }
+      { editable && <button className="save-layout-btn" onClick={reset}>reset</button> }
       <ResponsiveGridLayout
         layouts={layouts}
         useCSSTransforms={true}
-        compactType="vertical"
+        compactType={null}
         preventCollision={false}
         onLayoutChange={onLayoutChange}
         breakpoints={BREAKPOINTS}
